@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stock Day
 
-## Getting Started
+## 요구사항
 
-First, run the development server:
+- 사용자가 원하는 주식 정보를 실시간으로 검색
+- 특정 주식정보를 즐겨찾기 목록에 넣어서 즐겨찾기 주식 아이템으로 추가
+- 특정 주식과 관련된 뉴스나 정보를 검색 하여 즐겨찾기 주식 아이템에 맵핑
+- 즐겨찾기 주식 아이템에 투자 상황이나 개인적인 견해를 적을 수 있도록 웹에디터를 통해서 글을 작성
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 기술
+### Frontend
+- Next.js (v15)
+    - pnpm - npm에 비해서 좋은 성능을 가지고 있음, yarn은 명령어 구성 자체가 npm과 다름
+    - app router
+    - typescript (v5)
+    - turbopack - 안정화가 덜 되었으나 컴파일 속도가 웹팩에 비해 현저히 빠름
+    - prettier (v3) - 소스코드의 공통 포맷을 관리
+    - ES Lint (v8) - 런타임에 발생 할 수 있는 코드의 문제를 사전에 파악 할 수 위함
+    - tailwindcss (v3) - 디자인 시스템을 사용할 거시나, 예외적인 상황에 css 파일 없이 css를 커스터마이징 하기 위함
+    - mantine (v7) - 별도의 디자인 과정이 없으므로 mantine를 이용해서 UI를 구성함
+    - es-toolkit (v1) - 반복되고 복잡한 코드를 대체하여 중복 코드를 줄임, loadsh 대비해 경량화 된 패키징을 제공함
+    - zod (v3) - 유효성 스키마를 정의 할 수 있으며 이를 통해 뷰 인터페이스 생성하여 유효성 스키마와 인터페이스가 하나의 소스로 관리됨
+    - next-auth (v5) - Oauth 로그인 기능을 제공, vercel에서 관리하는 라이브러리로 다양한 제공업체와 연동이 가능함
+    - react-query (v5) - 클라이언트에서 서버 상태를 관리하기 위한 도구로 메모리 최적화 기능을 제공함
+    - tabler/icons-react (v3) - 모던한 리액트 아이콘을 제공함
+    - prosemirror - 웹 에디터 라이브러리로 기능 별로 모듈화 되어 높은 커스터마이징을 제공함
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend
+#### DB - superbase
+- postgresql 기반의 데이터베이스를 제공함
+- api를 통한 손쉬운 연동
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Depoly - vercel
+- next.js와 연동이 최적화 되어 있음
+- api 라우터를 자동으로 서버리스 형태로 배포하므로 서버 배포에 특별히 신경 쓸 필요가 없음
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
