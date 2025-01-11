@@ -8,12 +8,13 @@
 - 즐겨찾기 주식 아이템에 투자 상황이나 개인적인 견해를 적을 수 있도록 웹에디터를 통해서 글을 작성
 
 ## 기술
+
 ### Frontend
+
 - Next.js (v15)
     - pnpm - npm에 비해서 좋은 성능을 가지고 있음, yarn은 명령어 구성 자체가 npm과 다름
     - app router
     - typescript (v5)
-    - turbopack - 안정화가 덜 되었으나 컴파일 속도가 웹팩에 비해 현저히 빠름
     - prettier (v3) - 소스코드의 공통 포맷을 관리
     - ES Lint (v8) - 런타임에 발생 할 수 있는 코드의 문제를 사전에 파악 할 수 위함
     - tailwindcss (v3) - 디자인 시스템을 사용할 거시나, 예외적인 상황에 css 파일 없이 css를 커스터마이징 하기 위함
@@ -26,11 +27,14 @@
     - prosemirror - 웹 에디터 라이브러리로 기능 별로 모듈화 되어 높은 커스터마이징을 제공함
 
 ### Backend
+
 #### DB - superbase
+
 - postgresql 기반의 데이터베이스를 제공함
 - api를 통한 손쉬운 연동
 
 #### Depoly - vercel
+
 - next.js와 연동이 최적화 되어 있음
 - api 라우터를 자동으로 서버리스 형태로 배포하므로 서버 배포에 특별히 신경 쓸 필요가 없음
 
