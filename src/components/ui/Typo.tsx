@@ -49,6 +49,6 @@ const Typo = React.forwardRef<HTMLHeadingElement | HTMLParagraphElement, Typogra
     });
   }
 );
-Typo.displayName = 'Typography';
+Typo.displayName = 'Typo';
 
 export { Typo, typographyVariants };
