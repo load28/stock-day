@@ -13,8 +13,8 @@ export const authConfig = {
     strategy: 'database'
   },
   adapter: SupabaseAdapter({
-    url: process.env.SUPABASE_URL as string,
-    secret: process.env.SUPABASE_SERVICE_ROLE_KEY as string
+    url: process.env.SUPABASE_URL!,
+    secret: process.env.SUPABASE_SERVICE_ROLE_KEY!
   }),
   callbacks: {
     async redirect({ url, baseUrl }) {
