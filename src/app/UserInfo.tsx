@@ -5,9 +5,7 @@ import { Button } from '@stock-day/components/ui/Button';
 import { googleSignOut } from '@stock-day/core/auth/auth-actions';
 
 export const UserInfo = ({ email }: { email: string }) => {
-  const onLogout = async () => {
-    await googleSignOut();
-  };
+  const onLogout = async () => await googleSignOut();
 
   return (
     <div className={'flex flex-col gap-10'}>
