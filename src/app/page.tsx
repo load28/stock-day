@@ -1,9 +1,12 @@
-import { DesignSystem } from '@stock-day/app/DesignSystem';
+import { auth } from '@stock-day/core/auth/auth';
+import { UserInfo } from '@stock-day/app/UserInfo';
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+
   return (
     <div className={'flex w-full h-[100vh] justify-center items-center'}>
-      <DesignSystem />
+      <UserInfo email={session?.user?.email || ''} />;
     </div>
   );
 }
