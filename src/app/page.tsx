@@ -1,11 +1,9 @@
-import { Text } from '@mantine/core';
+import { DesignSystem } from '@stock-day/app/DesignSystem';
 
 export default function Home() {
   return (
-    <div className={'layout'}>
-      <Text size="xl" fw={700}>
-        Stock Day
-      </Text>
+    <div className={'flex w-full h-[100vh] justify-center items-center'}>
+      <DesignSystem />
     </div>
   );
 }
