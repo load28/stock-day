@@ -26,7 +26,11 @@
       "@stock-day/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": [
+      "node",
+      "@storybook/react"
+    ]
   },
   "include": [
     "next-env.d.ts",
