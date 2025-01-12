@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "^7.15.3",
-    "@mantine/hooks": "^7.15.3",
     "@next/bundle-analyzer": "^15.1.4",
     "@tabler/icons-react": "^3.28.1",
     "@tanstack/react-query": "^5.63.0",
