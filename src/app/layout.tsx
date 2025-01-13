@@ -27,7 +27,9 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className={'flex flex-col min-h-screen'}>{children}</div>
+      </body>
     </html>
   );
 }

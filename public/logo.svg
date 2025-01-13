@@ -1,0 +1,45 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .logo-primary { stroke: #2563eb; }
+        .logo-secondary { stroke: #7c3aed; }
+        .logo-text { fill: #1e40af; }
+        .logo-bg { fill: white; }
+
+        @media (prefers-color-scheme: dark) {
+        .logo-primary { stroke: #60a5fa; }
+        .logo-secondary { stroke: #a78bfa; }
+        .logo-text { fill: #93c5fd; }
+        .logo-bg { fill: transparent; }
+        }
+    </style>
+
+    <!-- 5포인트 직선 차트 1 -->
+    <polyline
+            points="50,90 125,50 200,70 275,30 350,50"
+            class="logo-primary"
+            stroke-width="4"
+            fill="none"
+    />
+
+    <!-- 5포인트 직선 차트 2 -->
+    <polyline
+            points="50,80 125,40 200,60 275,20 350,40"
+            class="logo-secondary"
+            stroke-width="3"
+            fill="none"
+            opacity="0.6"
+    />
+
+    <!-- 텍스트 -->
+    <text
+            x="200"
+            y="130"
+            font-family="Arial, sans-serif"
+            font-size="48"
+            font-weight="bold"
+            text-anchor="middle"
+            class="logo-text"
+    >
+        STOCK DAY
+    </text>
+</svg>
