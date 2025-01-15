@@ -7,5 +7,5 @@ export async function googleSignIn() {
 }
 
 export async function googleSignOut(redirectTo?: string) {
-  return await signOut({ redirectTo: redirectTo || `${process.env.NEXT_PUBLIC_APP_URL}/login` });
+  return await signOut({ redirectTo: redirectTo || `${process.env.NEXT_PUBLIC_APP_URL}` });
 }
