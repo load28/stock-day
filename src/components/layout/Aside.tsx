@@ -7,17 +7,18 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 
 export const Aside = () => {
   const [dashboards, setDashboards] = useState<string[]>(['S&P 500', 'Nasdaq', 'Dow Jones', 'Russell 2000']);
+  const [selectedId, setSelectedId] = useState<string>('S&P 500');
 
   return (
     <aside className={'w-60 p-4 border-r border-border'}>
       <nav>
-        <ListGroup items={dashboards} />
+        <ListGroup items={dashboards} selectedId={selectedId} />
       </nav>
     </aside>
   );
 };
 
-const ListGroup = ({ items }: { items: string[] }) => {
+const ListGroup = ({ items, selectedId }: { items: string[]; selectedId: string }) => {
   const [show, setShow] = useState<boolean>(true);
 
   return (
@@ -32,7 +33,7 @@ const ListGroup = ({ items }: { items: string[] }) => {
       {show && (
         <div className={'flex flex-col gap-0.5'}>
           {items.map((item) => {
-            return <ListItem key={item} item={item} />;
+            return <ListItem key={item} item={item} selectedId={selectedId} />;
           })}
         </div>
       )}
@@ -40,10 +41,12 @@ const ListGroup = ({ items }: { items: string[] }) => {
   );
 };
 
-const ListItem = ({ item }: { item: string }) => {
+const ListItem = ({ item, selectedId }: { item: string; selectedId: string }) => {
   return (
     <Link href={''}>
-      <div className={'px-2 py-1 rounded-md hover:bg-secondary select-none'}>
+      <div
+        className={`px-2 py-1 rounded-md hover:bg-secondary select-none ${selectedId === item ? 'bg-secondary' : ''}`}
+      >
         <Typo>{item}</Typo>
       </div>
     </Link>
