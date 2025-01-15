@@ -2,7 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from '@stock-day/components/ui/Avatar';
 import Image from 'next/image';
-import { useSessionQuery } from '@stock-day/core/react-query/session-client-query';
+import { useSessionQuery } from '@stock-day/core/react-query/session/session-client-query';
 import { Button } from '@stock-day/components/ui/Button';
 import { googleSignIn, googleSignOut } from '@stock-day/core/auth/auth-actions';
 
