@@ -1,0 +1,23 @@
+{
+  "name": "@stock-day/utils",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "exports": {
+    "./ws-observer": {
+      "types": "./src/ws-observer.ts",
+      "default": "./dist/ws-observer.js"
+    },
+    "./subscritpion-manager": {
+      "types": "./src/subscription-manager.ts",
+      "default": "./dist/subscription-manager.js"
+    }
+  },
+  "packageManager": "pnpm@9.15.5"
+}
