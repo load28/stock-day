@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { QueryProvider } from '@stock-day/core/providers/query/QueryProvider';
 import { getQueryClient } from '@stock-day/core/providers/query/query-utils';
-import { sessionQueryPrefetch } from '@stock-day/core/react-query/session-query';
+import { sessionQueryPrefetch } from '@stock-day/core/react-query/session/session-query';
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
 
 const geistSans = Geist({
