@@ -1,12 +1,12 @@
 'use client';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@stock-day/components/ui/Avatar';
-import Image from 'next/image';
-import { useSessionQuery } from '@stock-day/core/react-query/session/session-client-query';
 import { Button, buttonVariants } from '@stock-day/components/ui/Button';
+import { Typo } from '@stock-day/components/ui/Typo';
 import { googleSignIn, googleSignOut } from '@stock-day/core/auth/auth-actions';
-import { PropsWithChildren } from 'react';
+import { useSessionQuery } from '@stock-day/core/react-query/session/session-client-query';
 import Link from 'next/link';
+import { PropsWithChildren } from 'react';
 
 export const Header = () => {
   const { data: session } = useSessionQuery();
@@ -21,7 +21,9 @@ export const Header = () => {
 const HeaderContainer = ({ children }: PropsWithChildren) => {
   return (
     <header className={'flex justify-between items-center h-16 px-4 border-b border-border'}>
-      <Image src={'/logo.svg'} alt={'Stock Day'} width={120} height={60} />
+      <Typo variant={'h3'} className={'font-bold'}>
+        Stock Day
+      </Typo>
       {children}
     </header>
   );

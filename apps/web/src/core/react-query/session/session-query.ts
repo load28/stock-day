@@ -1,4 +1,3 @@
-import { QueryClient } from '@tanstack/react-query';
 import { auth } from '@stock-day/core/auth/auth';
 import {
   SESSION_QUERY_KEY,
@@ -6,6 +5,7 @@ import {
   SessionInfoSchema,
   TSessionInfo
 } from '@stock-day/core/react-query/session/session-constants';
+import { QueryClient } from '@tanstack/react-query';
 
 export async function sessionQueryPrefetch(queryClient: QueryClient) {
   await queryClient.prefetchQuery({
